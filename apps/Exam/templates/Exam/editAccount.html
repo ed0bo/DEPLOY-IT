@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'Exam/css/main.css' %}" />
+</head>
+<body>
+    <h1>WELCOME {{thisUser.firstName}}</h1>
+    <div class="top">
+        <a href="/logout"><button class="btn btn-outline-primary">LOG OUT</button></a>
+        <a href="/quotes"><button class="btn btn-outline-primary">GO BACK</button></a>
+    </div>
+    <div class="border border-primary rounded quoteContainer top">
+
+    <p>
+        Edit your account details
+    </p>
+
+        {% if messages %} 
+        <div class="errorContainer border border-danger rounded"> 
+            {% for message in messages %}
+            <p>{{message}}</p>
+            {% endfor %}
+        </div>   
+    {% endif %}
+    
+    <form action="/editAccount" method="POST">
+        {%csrf_token%}
+    
+    <p>First Name: </p><input type="text" name="firstName" value="{{thisUser.firstName}}">
+    <p>Last Name: </p><input type="text" name="lastName" value="{{thisUser.lastName}}">
+    <p>Email: </p><input type="text" name="email" value="{{thisUser.email}}">
+    <button type="submit" class="btn btn-warning">Update</button>
+</form>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+</body>
+</html>

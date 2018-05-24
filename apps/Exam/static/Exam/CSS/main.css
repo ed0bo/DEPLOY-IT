@@ -1,0 +1,99 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    margin-left: 30px;
+}
+
+h3 {
+    margin-left: 30px;
+}
+
+.registrationContainer {
+    width: 223px;
+    min-height: 500px;
+    display: inline-block;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    vertical-align: top;
+}
+
+.registrationButton {
+    margin-top: 10px;
+    margin-left: 102px
+}
+
+.loginButton {
+    margin-top: 10px;
+    margin-left: 118px
+}
+
+.errorContainer {
+    margin-left: 323px;
+    padding-left: 10px;
+    width: 262px;
+}
+
+.quoteContainerMaster {
+    width: 223px;
+    min-height: 500px;
+    display: inline-block;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    vertical-align: top;
+}
+
+.addQuoteContainerMaster {
+    width: 223px;
+    min-height: 80px;
+    display: inline-block;
+    padding-left: 10px;
+    margin-left: 65px;
+    margin-top: 10px;
+    vertical-align: top;
+}
+
+div {
+    word-wrap: break-word;
+}
+
+.quoteContainer {
+    width: 275px;
+    min-height: 100px;
+    display: inline-block;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    vertical-align: top;
+}
+
+.addQuoteContainer {
+    width: 263px;
+    min-height: 500px;
+    display: inline-block;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    vertical-align: top;
+}
+    
+.quotesPostedContainerMaster {
+    width: 223px;
+    min-height: 50px;
+    display: inline-block;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    vertical-align: top;
+}
+
+.top {
+    height: auto;
+    width: auto;
+    margin-left: 30px;
+}
